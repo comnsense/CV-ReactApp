@@ -9,6 +9,7 @@ import Stats from './Stats';
 import ContactForm from './ContactForm';
 import './AccountingPage.css';
 
+
 const AccountingPage = () => {
   useEffect(() => {
     // Load saved theme
@@ -62,9 +63,10 @@ const AccountingPage = () => {
           </div>
         </div>
 
-        <CompaniesTable />
         <Responsibilities />
-        <TechnicalSkills />
+         <TechnicalSkills />
+        <CompaniesTable />
+       
         <Stats />
         <ContactForm />
       </main>

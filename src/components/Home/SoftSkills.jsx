@@ -15,8 +15,7 @@ const SoftSkills = () => {
   return (
     <section className="soft-skills-container">
       <h2 className="card-title">
-        <i className="fas fa-heart"></i>
-        Меки умения
+      
       </h2>
       <div className="soft-skills-items">
         {softSkills.map((skill, index) => (
