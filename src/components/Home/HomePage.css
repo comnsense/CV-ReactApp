@@ -1,0 +1,173 @@
+/* Profile Section - актуализиран */
+.profile-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.profile-info h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-description {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.contact-info {
+  background: linear-gradient(145deg, var(--bg-secondary), var(--bg-card));
+  padding: 1.8rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.contact-info:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent-color);
+}
+
+.contact-info h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.8rem;
+}
+
+.contact-info h3 i {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.contact-info h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  margin: 1.2rem 0 1rem 0;
+  font-size: 1.1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.contact-info h4 i {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+.contact-details,
+.personal-details {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+  margin: 0.8rem 0;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.3rem 0;
+  transition: all 0.3s ease;
+}
+
+.contact-info p:hover {
+  transform: translateX(5px);
+  color: var(--accent-color);
+}
+
+.contact-info p i {
+  color: var(--accent-color);
+  width: 20px;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-info a:hover {
+  color: var(--accent-color);
+}
+
+.personal-details {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .profile-info h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .section-description {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .contact-info {
+    padding: 1.5rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.2rem;
+    justify-content: center;
+  }
+
+  .contact-info h4 {
+    font-size: 1rem;
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info p {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .contact-info p i {
+    width: 16px;
+  }
+}
