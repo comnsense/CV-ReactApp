@@ -23,7 +23,7 @@ const ProfileSection = () => {
         <div className="contact-details">
           <p><i className="fas fa-map-pin"></i> ж.к. Дианабад, 53, 1172 София, България</p>
           <p>
-            <a href="mailto:comnsense17@gmail.com">
+            <a href="mailto:comnsense17@gmail.com" target="_blank" rel="noopener noreferrer">
               <i className="fas fa-envelope"></i> comnsense17@gmail.com
             </a>
           </p>

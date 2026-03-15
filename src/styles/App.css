@@ -275,3 +275,329 @@ body {
     padding: 0 1rem;
   }
 }
+
+/* Office Skills Section - Пълен CSS */
+.office-skills-section {
+  margin: 3rem 0;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.office-skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.office-skill-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 24px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  box-shadow: var(--shadow);
+}
+
+.office-skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-gradient);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.office-skill-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.office-skill-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-xl);
+}
+
+.office-skill-card:hover::before {
+  opacity: 0.1;
+}
+
+.office-skill-card:hover::after {
+  opacity: 1;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: rotate(45deg) translate(-30%, -30%);
+  }
+  100% {
+    transform: rotate(45deg) translate(30%, 30%);
+  }
+}
+
+.office-skill-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.office-skill-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--bg-gradient);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: white;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.office-skill-icon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.office-skill-card:hover .office-skill-icon {
+  transform: rotateY(360deg) scale(1.1);
+  box-shadow: 0 0 30px var(--accent-color);
+}
+
+.office-skill-card:hover .office-skill-icon::before {
+  opacity: 1;
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: rotate(0deg) translate(-30%, -30%);
+  }
+  100% {
+    transform: rotate(360deg) translate(30%, 30%);
+  }
+}
+
+.office-skill-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.office-skill-name::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--bg-gradient);
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+.office-skill-card:hover .office-skill-name {
+  color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+.office-skill-card:hover .office-skill-name::after {
+  width: 100%;
+}
+
+.office-skill-description {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 1.2rem 0 1.5rem;
+  padding: 0 0.5rem;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.office-skill-card:hover .office-skill-description {
+  color: var(--text-secondary);
+  border-left-color: var(--accent-color);
+  padding-left: 1.2rem;
+}
+
+/* Анимация при появяване */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.office-skill-card {
+  animation: fadeInUp 0.6s ease backwards;
+}
+
+.office-skill-card:nth-child(1) { animation-delay: 0.1s; }
+.office-skill-card:nth-child(2) { animation-delay: 0.2s; }
+.office-skill-card:nth-child(3) { animation-delay: 0.3s; }
+.office-skill-card:nth-child(4) { animation-delay: 0.4s; }
+.office-skill-card:nth-child(5) { animation-delay: 0.5s; }
+.office-skill-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Dark theme специфични стилове */
+[data-theme="dark"] .office-skill-card {
+  background: linear-gradient(145deg, #1a2533, #1e2a3a);
+  border-color: #2a3a4a;
+}
+
+[data-theme="dark"] .office-skill-card:hover {
+  background: linear-gradient(145deg, #1e2f40, #2a3a4a);
+  border-color: var(--accent-color);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .office-skill-description {
+  color: #b0b7cc;
+}
+
+[data-theme="dark"] .office-skill-card:hover .office-skill-description {
+  color: #ffffff;
+}
+
+/* Light theme специфични стилове */
+[data-theme="light"] .office-skill-card {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .office-skill-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive стилове */
+@media (max-width: 768px) {
+  .office-skills-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .office-skill-card {
+    padding: 1.5rem;
+  }
+  
+  .office-skill-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+  
+  .office-skill-name {
+    font-size: 1.2rem;
+  }
+  
+  .office-skill-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .office-skill-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .office-skill-name::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .office-skill-card:hover .office-skill-description {
+    padding-left: 0.5rem;
+  }
+}
+
+/* Допълнителни ефекти при hover */
+.office-skill-card {
+  position: relative;
+}
+
+.office-skill-card .office-skill-header,
+.office-skill-card .office-skill-description {
+  position: relative;
+  z-index: 2;
+}
+
+/* Градиентна рамка при hover */
+.office-skill-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--bg-gradient);
+  border-radius: 26px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.office-skill-card:hover::before {
+  opacity: 0.3;
+}
+
+/* Брой на skills */
+.office-skills-section .card-title {
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.office-skills-section .card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--bg-gradient);
+  border-radius: 2px;
+}
