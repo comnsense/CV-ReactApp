@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
 import ProfileSection from './ProfileSection';
@@ -7,13 +7,10 @@ import ExperienceSection from './ExperienceSection';
 import SkillsSection from './SkillsSection';
 import OfficeSkills from '../Main/OfficeSkills';
 import SoftSkills from './SoftSkills';
-import SocialLinks from './SocialLinks';
 import ContactFormHome from './ContactFormHome';
 import './HomePage.css';
 
 const HomePage = () => {
-  const [activeSection, setActiveSection] = useState('');
-
   useEffect(() => {
     // Load saved theme
     const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -38,25 +35,6 @@ const HomePage = () => {
     };
 
     logVisitor();
-
-    // Active section highlighting on scroll
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id]');
-      const scrollY = window.pageYOffset;
-
-      sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          setActiveSection(sectionId);
-        }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -71,7 +49,6 @@ const HomePage = () => {
         <SoftSkills />
         <OfficeSkills />
         <ContactFormHome />
-        <SocialLinks />
       </main>
 
       <Footer />
