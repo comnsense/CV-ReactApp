@@ -7,7 +7,7 @@ import Responsibilities from './Responsibilities';
 import TechnicalSkills from './TechnicalSkills';
 import Stats from './Stats';
 import ContactForm from './ContactForm';
-import ExperienceSection from './ExperienceSection'; // <-- Нов импорт
+import ExperienceSection from './ExperienceSection';
 import './AccountingPage.css';
 
 const AccountingPage = () => {
@@ -58,7 +58,9 @@ const AccountingPage = () => {
         </Link>
 
         <div className="profile">
-         
+          <div className="profile-title">
+            <h1>Практически опит</h1>
+          </div>
         </div>
 
         {/* Секция с трудов опит */}

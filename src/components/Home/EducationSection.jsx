@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';  // Link не се използва, може да се премахне
 
 const EducationSection = () => {
   return (
@@ -41,8 +41,6 @@ const EducationSection = () => {
             </div>
           </div>    
         </div>
-        
-        
       </div>
     </section>
   );
