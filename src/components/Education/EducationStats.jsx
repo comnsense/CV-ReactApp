@@ -4,19 +4,19 @@ import { coursesData } from '../../data/coursesData';
 const EducationStats = ({ currentLang }) => {
   // Изчисления за статистика
   const totalCourses = coursesData.length;
-  // const totalCredits = 240;  // ПРЕМАХНЕТЕ ТОЗИ РЕД
   const averageGrade = 5.02;
   
   const highGrades = coursesData.filter(c => parseInt(c.grade) >= 5).length;
   const highGradesPercent = Math.round((highGrades / totalCourses) * 100);
   
-  const ectsDistribution = {
-    A: coursesData.filter(c => c.ects === 'A').length,
-    B: coursesData.filter(c => c.ects === 'B').length,
-    C: coursesData.filter(c => c.ects === 'C').length,
-    D: coursesData.filter(c => c.ects === 'D').length,
-    E: coursesData.filter(c => c.ects === 'E').length
-  };
+  // ПРЕМАХНЕТЕ ТОЗИ БЛОК - той не се използва
+  // const ectsDistribution = {
+  //   A: coursesData.filter(c => c.ects === 'A').length,
+  //   B: coursesData.filter(c => c.ects === 'B').length,
+  //   C: coursesData.filter(c => c.ects === 'C').length,
+  //   D: coursesData.filter(c => c.ects === 'D').length,
+  //   E: coursesData.filter(c => c.ects === 'E').length
+  // };
 
   return (
     <div className="education-stats-container">
