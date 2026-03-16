@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';  // Link не се използва, може да се премахне
+// import { Link } from 'react-router-dom';  // ПРЕМАХНЕТЕ ТОЗИ РЕД
 
 const EducationSection = () => {
   return (

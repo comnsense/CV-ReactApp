@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';  // ПРЕМАХНЕТЕ ТОЗИ РЕД
 
 const ExperienceSection = () => {
   return (
@@ -13,6 +13,31 @@ const ExperienceSection = () => {
           Трудов опит
         </h2>
 
+        <div className="experience-item">
+          <div className="item-header">
+            <span className="item-title">Практически опит</span>
+            <span className="item-date">2022 – 2026</span>
+          </div>
+          <div className="item-details">
+            <p>Имам опит в работа с различни бизнес сектори и организации, което ми дава широка практическа основа и добра адаптивност. </p>
+          
+            <ul>
+              <li>Търговия на дребно</li>
+              <li>Преводаческа дейност</li>
+              <li>Строителството</li>
+              <li>Консултантски услуги</li> 
+              <li>Социални услуги</li>
+              <li>Делегирана държавна дейност</li>
+              <li>Бюджетно финансиране</li>
+              <li>Производство</li>
+            </ul>
+           
+            <p>Счетоводен софтуер: <a href="https://bulmar.com/bg/accounting-software" target="_blank" rel="noopener noreferrer" className="hyperlink">BulMar Office (Счетоводство+, ТРЗ)</a>, Кредо 2000 - ERP </p>
+            <a href="/schety" className="accounting-button">
+              <i className="fas fa-calculator"></i> Виж повече →
+            </a>
+          </div>
+        </div>
 
         <div className="experience-item">
           <div className="item-header">
