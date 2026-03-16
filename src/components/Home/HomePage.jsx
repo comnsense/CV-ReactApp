@@ -45,9 +45,10 @@ const HomePage = () => {
         <ProfileSection />
         <EducationSection />
         <ExperienceSection />
-        <SkillsSection />
+       
         <SoftSkills />
         <OfficeSkills />
+         <SkillsSection />
         <ContactFormHome />
       </main>
 

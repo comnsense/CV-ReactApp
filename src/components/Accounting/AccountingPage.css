@@ -15,7 +15,7 @@
 }
 
 .profile-title h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: var(--text-primary);
   margin: 0 0 2rem 0;
   font-weight: 800;
@@ -488,5 +488,307 @@
   .company-notes {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+/* Experience Section Styles - добавете към AccountingPage.css */
+.cards-container {
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.experience-item {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.experience-item:hover {
+  background: var(--bg-secondary);
+  transform: translateX(5px);
+  border-radius: 16px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.item-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.item-date {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+}
+
+.item-subtitle {
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.item-details ul {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin: 0.8rem 0;
+}
+
+.item-details li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.item-details li:before {
+  content: "▹";
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+}
+
+.accounting-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--bg-gradient);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.accounting-button:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.hyperlink {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hyperlink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .experience-item {
+    padding: 1rem;
+  }
+}
+
+/* Stats - Подобрен стил */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+  margin: 2.5rem 0;
+}
+
+.stat-card {
+  background: linear-gradient(145deg, var(--bg-card), var(--bg-secondary));
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-lg);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--bg-gradient);
+  border-radius: 26px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(255,255,255,0.3), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  border-color: transparent;
+}
+
+.stat-card:hover::before {
+  opacity: 0.3;
+}
+
+.stat-card:hover::after {
+  opacity: 1;
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+  transform: scale(1.1) rotate(360deg);
+  color: white;
+}
+
+.stat-number {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.stat-card:hover .stat-number {
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.stat-card:hover .stat-label {
+  color: white;
+}
+
+/* Ако искате различни цветове за различните статистики */
+.stat-card:nth-child(1) .stat-icon { color: #3b82f6; }
+.stat-card:nth-child(2) .stat-icon { color: #10b981; }
+.stat-card:nth-child(3) .stat-icon { color: #f59e0b; }
+.stat-card:nth-child(4) .stat-icon { color: #8b5cf6; }
+
+.stat-card:nth-child(1):hover::before { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.stat-card:nth-child(2):hover::before { background: linear-gradient(135deg, #10b981, #059669); }
+.stat-card:nth-child(3):hover::before { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.stat-card:nth-child(4):hover::before { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats {
+    gap: 1.2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-card {
+    padding: 1.5rem 1rem;
+    min-height: 150px;
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    min-height: 130px;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 1.2rem;
+    gap: 1.5rem;
+  }
+  
+  .stat-icon {
+    margin-bottom: 0;
+    font-size: 2.2rem;
+  }
+  
+  .stat-content {
+    flex: 1;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
   }
 }

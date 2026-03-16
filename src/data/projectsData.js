@@ -1,20 +1,21 @@
 export const projectsData = [
-  {
-    title: "CV - Resume",
-    image: "/img/cv-resume.jpeg",
+  
+    {
+    title: "Website - Portfolio",
+    image: "/img/projects.jpeg",
     fallbackIcon: "fa-laptop-code",
-    skills: ["HTML5", "CSS3", "JavaScript", "Responsive"],
-    description: "Main portfolio website with CV and projects",
+    skills: ["ReactApp", "Git"],
+    description: "Main projects page",
     links: [
-      { url: "https://comnsense.github.io/", icon: "fas fa-external-link-alt", text: "Overview" },
-      { url: "https://github.com/comnsense/comnsense.github.io", icon: "fab fa-github", text: "GitHub" }
+      { url: "https://cvreactapp.vercel.app", icon: "fas fa-external-link-alt", text: "Demo" },
+      { url: "https://github.com/comnsense/Projects", icon: "fab fa-github", text: "GitHub" }
     ]
   },
   {
     title: "TarotApp",
     image: "/img/reacttarot.jpg",
     fallbackIcon: "fa-gamepad",
-    skills: ["React", "Web Application", "JavaScript"],
+    skills: ["React", "Web Application"],
     description: "Interactive Tarot Card Guide - Your digital companion in the world of Tarot.",
     links: [
       { url: "https://react-tarot-sandy.vercel.app", icon: "fas fa-external-link-alt", text: "Demo" },
@@ -33,14 +34,25 @@ export const projectsData = [
     ]
   },
   {
-    title: "Website - Portfolio",
-    image: "/img/projects.jpg",
+    title: "CV - Resume",
+    image: "/img/cv-resume.jpeg",
     fallbackIcon: "fa-laptop-code",
-    skills: ["HTML5", "CSS3", "JavaScript", "Responsive"],
-    description: "Main projects page",
+    skills: [ "GitHub Pages", "JavaScript", "Responsive"],
+    description: "Main portfolio website with CV and projects",
     links: [
-      { url: "https://comnsense.github.io/Projects/", icon: "fas fa-external-link-alt", text: "Overview" },
-      { url: "https://github.com/comnsense/Projects", icon: "fab fa-github", text: "GitHub" }
+      { url: "https://comnsense.github.io/", icon: "fas fa-external-link-alt", text: "Overview" },
+      { url: "https://github.com/comnsense/comnsense.github.io", icon: "fab fa-github", text: "GitHub" }
+    ]
+  },
+{
+    title: "Development of an App for Mental Health Support",
+    image: "/img/thesis.jpg",
+    fallbackIcon: "fa-brain",
+    skills: ["Node.js", "Express", "React", "NLP", "AI"],
+    description: "Using AI and NLP for analyzing user queries and generating adaptive responses.",
+    links: [
+      { url: "https://comnsense.github.io/Annex/thesis.pdf", icon: "fas fa-file-pdf", text: "Thesis" },
+      { url: "https://github.com/comnsense/ai-mental-assistant-app", icon: "fab fa-github", text: "GitHub" }
     ]
   },
   {
@@ -75,7 +87,8 @@ export const projectsData = [
       { url: "https://github.com/comnsense/mumblrtum", icon: "fab fa-github", text: "GitHub" }
     ]
   },
-  {
+
+    {
     title: "Application Bulgarian Chinese Chamber for Industrial Development (BCCID)",
     fallbackIcon: "fa-building",
     skills: ["AppSheet", "Data visualization"],
@@ -85,17 +98,6 @@ export const projectsData = [
     ],
     links: [
       { url: "https://www.appsheet.com/start/5e82fa28-7112-40f0-ab58-2fba90efe623?platform=desktop", icon: "fas fa-external-link-alt", text: "AppSheet" }
-    ]
-  },
-  {
-    title: "Development of an App for Mental Health Support",
-    image: "/img/thesis.jpg",
-    fallbackIcon: "fa-brain",
-    skills: ["Node.js", "Express", "React", "NLP", "AI"],
-    description: "Using AI and NLP for analyzing user queries and generating adaptive responses.",
-    links: [
-      { url: "https://comnsense.github.io/Annex/thesis.pdf", icon: "fas fa-file-pdf", text: "Thesis" },
-      { url: "https://github.com/comnsense/ai-mental-assistant-app", icon: "fab fa-github", text: "GitHub" }
     ]
   }
 ];

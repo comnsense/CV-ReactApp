@@ -32,33 +32,299 @@
   --link-hover: #2563eb;
   --link-visited: #8b5cf6;
 }
+/* Root variables за светла тема (по подразбиране) */
+:root {
+  /* Light theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-light: #93c5fd;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  --code-bg: #f1f5f9;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --footer-bg: #f1f5f9;
+  --card-hover: #ffffff;
+  --skill-bg: #f1f5f9;
+  --link-color: #3b82f6;
+  --link-hover: #2563eb;
+  --link-visited: #8b5cf6;
+  --glow-color: rgba(59, 130, 246, 0.3);
+}
 
+/* Красива тъмна тема */
 [data-theme="dark"] {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-card: #1e293b;
-  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --text-primary: #f1f5f9;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --border-color: #334155;
-  --accent-color: #60a5fa;
-  --accent-hover: #93c5fd;
-  --accent-light: #3b82f6;
+  /* Основни цветове - наситено тъмно синьо/виолетово */
+  --bg-primary: #0a0c14;
+  --bg-secondary: #111827;
+  --bg-card: #1a1f2e;
+  --bg-gradient: linear-gradient(135deg, #6366f1, #8b5cf6, #d946ef);
+  
+  /* Текст - мек бял с нюанси */
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  
+  /* Граници - полупрозрачни */
+  --border-color: rgba(99, 102, 241, 0.2);
+  
+  /* Акцентни цветове - неонови */
+  --accent-color: #818cf8;
+  --accent-hover: #a5b4fc;
+  --accent-light: #6366f1;
+  
+  /* Допълнителни цветове */
   --success-color: #34d399;
   --warning-color: #fbbf24;
   --danger-color: #f87171;
-  --code-bg: #0f172a;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
-  --header-bg: rgba(15, 23, 42, 0.9);
-  --footer-bg: #0f172a;
-  --card-hover: #2d3a4f;
-  --skill-bg: #0f172a;
-  --link-color: #60a5fa;
-  --link-hover: #93c5fd;
+  
+  /* Фонове */
+  --code-bg: #1e1e2e;
+  --header-bg: rgba(10, 12, 20, 0.95);
+  --footer-bg: #0a0c14;
+  --card-hover: #242b3d;
+  --skill-bg: #242b3d;
+  
+  /* Линкове */
+  --link-color: #a5b4fc;
+  --link-hover: #c7d2fe;
   --link-visited: #c084fc;
+  
+  /* Сенки - по-дълбоки */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+  
+  /* Glow ефект за тъмна тема */
+  --glow-color: rgba(129, 140, 248, 0.4);
+}
+
+/* Стилове за тъмна тема - карти */
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .info-card,
+[data-theme="dark"] .skill-category,
+[data-theme="dark"] .office-skill-card {
+  background: linear-gradient(145deg, #1a1f2e, #141a26);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+[data-theme="dark"] .project-card:hover,
+[data-theme="dark"] .info-card:hover,
+[data-theme="dark"] .skill-category:hover,
+[data-theme="dark"] .office-skill-card:hover {
+  background: linear-gradient(145deg, #1f2638, #1a1f2e);
+  border-color: rgba(129, 140, 248, 0.3);
+  box-shadow: 0 8px 32px rgba(129, 140, 248, 0.15);
+}
+
+/* Glow ефект за заглавия */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+  text-shadow: 0 0 20px var(--glow-color);
+}
+
+[data-theme="dark"] .profile-info h1 {
+  background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(129, 140, 248, 0.5);
+}
+
+/* Неонови ефекти за линкове */
+[data-theme="dark"] a {
+  color: #a5b4fc;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] a:hover {
+  color: #c7d2fe;
+  text-shadow: 0 0 8px #818cf8;
+}
+
+/* Стилове за skill tags в тъмна тема */
+[data-theme="dark"] .skill-tag {
+  background: rgba(129, 140, 248, 0.1);
+  border-color: rgba(129, 140, 248, 0.2);
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .skill-tag:hover {
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 0 15px #818cf8;
+}
+
+/* Градиентни бутони */
+[data-theme="dark"] .thesis-button,
+[data-theme="dark"] .submit-btn-modern,
+[data-theme="dark"] .submit-btn {
+  background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6);
+  background-size: 200% 200%;
+  animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Неонов ефект при hover */
+[data-theme="dark"] .thesis-button:hover,
+[data-theme="dark"] .submit-btn-modern:hover,
+[data-theme="dark"] .submit-btn:hover {
+  box-shadow: 0 0 20px #818cf8, 0 0 40px #c084fc;
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Стилове за таблици */
+[data-theme="dark"] table {
+  background: linear-gradient(145deg, #1a1f2e, #141a26);
+}
+
+[data-theme="dark"] th {
+  background: linear-gradient(145deg, #242b3d, #1a1f2e);
+  color: #f3f4f6;
+  border-bottom: 2px solid #818cf8;
+}
+
+[data-theme="dark"] td {
+  border-bottom: 1px solid rgba(129, 140, 248, 0.1);
+}
+
+[data-theme="dark"] tr:hover td {
+  background: rgba(129, 140, 248, 0.1);
+}
+
+/* Статистика в тъмна тема */
+[data-theme="dark"] .stat-card {
+  background: linear-gradient(145deg, #1a1f2e, #141a26);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+}
+
+[data-theme="dark"] .stat-card:hover {
+  border-color: #818cf8;
+  box-shadow: 0 0 30px rgba(129, 140, 248, 0.3);
+}
+
+/* Форми в тъмна тема */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+  background: #242b3d;
+  border-color: rgba(129, 140, 248, 0.2);
+  color: #f3f4f6;
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2);
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #6b7280;
+}
+
+/* Footer в тъмна тема */
+[data-theme="dark"] .footer-container {
+  background: linear-gradient(145deg, #0a0c14, #111827);
+  border-top: 1px solid rgba(129, 140, 248, 0.2);
+}
+
+[data-theme="dark"] .social-link a {
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  box-shadow: 0 0 15px rgba(129, 140, 248, 0.3);
+}
+
+[data-theme="dark"] .social-link a:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 25px #818cf8;
+}
+
+/* Анимация за тъмна тема */
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .info-card,
+[data-theme="dark"] .skill-category,
+[data-theme="dark"] .office-skill-card {
+  animation: darkGlow 3s ease-in-out infinite;
+}
+
+@keyframes darkGlow {
+  0%, 100% {
+    border-color: rgba(129, 140, 248, 0.15);
+  }
+  50% {
+    border-color: rgba(129, 140, 248, 0.3);
+  }
+}
+
+/* Header в тъмна тема */
+[data-theme="dark"] .header {
+  background: rgba(10, 12, 20, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(129, 140, 248, 0.2);
+}
+
+[data-theme="dark"] .nav-item a {
+  color: #d1d5db;
+}
+
+[data-theme="dark"] .nav-item a:hover {
+  color: white;
+  background: rgba(129, 140, 248, 0.15);
+}
+
+[data-theme="dark"] .nav-item a.active {
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  color: white;
+}
+
+/* Back link в тъмна тема */
+[data-theme="dark"] .back-link {
+  background: rgba(129, 140, 248, 0.1);
+  border-color: rgba(129, 140, 248, 0.2);
+  color: #a5b4fc;
+}
+
+[data-theme="dark"] .back-link:hover {
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  color: white;
+  border-color: transparent;
+}
+
+/* Scrollbar за тъмна тема */
+[data-theme="dark"] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #1a1f2e;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  border-radius: 5px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #a5b4fc, #c084fc);
 }
 
 /* Global styles */

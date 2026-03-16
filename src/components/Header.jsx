@@ -42,7 +42,7 @@ const Header = () => {
               onClick={() => setMenuActive(false)}
             >
               <i className="fas fa-calculator"></i>
-              <span>Практически опит</span>
+              <span>Опит</span>
             </Link>
           </li>
           <li className="nav-item">

@@ -42,9 +42,7 @@ const EducationSection = () => {
           </div>    
         </div>
         
-        <Link to="/education" className="thesis-button">
-          <i className="fas fa-graduation-cap"></i> Дипломно приложение →
-        </Link>
+        
       </div>
     </section>
   );
